@@ -1,0 +1,72 @@
+head {
+  column-span: all;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
+  text-justify: distribute;
+
+}
+
+h1 {
+  justify-self: center;
+}
+
+body {
+  background-color: white;
+  background-blend-mode: lighten;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 30% 30% 30%;
+  background-color: aliceblue;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.playerInfo {
+  display: flex;
+  justify-content: space-around;
+  justify-items: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border-style: groove;
+  border-color: green;
+  border-width: 10px;
+}
+
+.pokeInfo {
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  height: 250px;
+  justify-content: space-around;
+  justify-items: flex-start;
+  background-color: goldenrod;
+  background-blend-mode: soft-light;
+  align-items: center;
+
+  border-style: inset;
+  border-color: gold;
+  border-width: 5px;
+
+}
+
+.playerInput {
+  display: flex;
+  justify-content: space-around;
+  justify-items: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border-style: inset;
+  border-color: green;
+  border-width: 10px;
+}
+
+#playerScore {
+  font-size: large;
+}

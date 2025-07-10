@@ -10,6 +10,7 @@ var currentPokeName;
 var currentPokeID;
 var pokePageID = document.querySelector("#currentID");
 var pokePageName = document.querySelector("#currentName");
+var pokePicture;
 
 window.onload = function () {
   NewGame();
@@ -47,8 +48,11 @@ function ApplyRandom() {
   currentPokeID = pokeList.id;
   console.log("poke ID: ", currentPokeID);
   currentPokeName = pokeList["name"];
+  pokePicture = pokeList.sprites["front_default"]
+  console.log(pokePicture);
   document.querySelector("#currentID").innerHTML = currentPokeID;
-  document.querySelector("#currentName").value = "??";
+  document.querySelector("#currentName").innerHTML = "??";
+  document.querySelector("#currentPic").src = pokePicture;
   //console.log("got random: ", currentPokeID, currentPokeName);
   //return random;
 }

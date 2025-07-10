@@ -5,26 +5,39 @@
   <meta charset="UTF-8" />
   <title>Poke Guesser</title>
   <h1>Who's That Pokemon!</h1>
+
+  <link href="index.css" rel="stylesheet">
+
 </head>
 
 <body>
-  <div id="playerInfo">
-    <label>Score:</label>
-    <label id="playerScore">0</label>
-    <h1 id="winMessage"> </h1>
+
+  <div class="content">
+
+
+    <div class="playerInfo">
+      <label>Score:</label>
+      <label id="playerScore">0</label>
+      <h1 id="winMessage"> </h1>
+    </div>
+
+    <div class="playerInput">
+      <input type="text" id="guess" />
+      <button id="guessButton">Guess</button>
+    </div>
+
+    <div class="pokeInfo">
+      <span>Pokemon ID:</span>
+      <label id="currentID">?</label>
+      <br>
+      <img src="" id="currentPic" height="192px" width="192px"></img>
+      <br>
+      <span>Pokemon Name:</span>
+      <label id="currentName">??</label>
+    </div>
+
   </div>
 
-  <div id="pokeInfo">
-    <label id="currentID">?</label>
-    <br>
-    <label id="currentName">??</label>
-
-  </div>
-
-  <div id="playerInput">
-    <input type="text" id="guess" />
-    <button id="guessButton">Guess</button>
-  </div>
 
 </body>
 
