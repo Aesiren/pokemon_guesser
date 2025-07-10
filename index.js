@@ -28,7 +28,7 @@ function NewGame() {
   console.log("starting new game");
   GetRandom();
   document.querySelector("#guess").value = "";
-  document.querySelector("#winMessage").innerHTML = "";
+  document.querySelector("#winMessage").innerHTML = "What's Your Guess?";
 
 
 }

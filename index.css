@@ -1,11 +1,9 @@
-head {
-  column-span: all;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
-  align-self: center;
+header {
+  display: flex;
   justify-content: center;
-  text-justify: distribute;
+  border-bottom: 2px solid black;
+  padding-bottom: 4px;
+
 
 }
 
