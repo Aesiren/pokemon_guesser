@@ -1,0 +1,19 @@
+{
+  "name": "pokemon_guesser",
+  "version": "1.0.0",
+  "description": "test project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aesiren/pokemon_guesser.git"
+  },
+  "author": "Evan Bonk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aesiren/pokemon_guesser/issues"
+  },
+  "homepage": "https://github.com/Aesiren/pokemon_guesser#readme"
+}
