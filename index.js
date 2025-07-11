@@ -1,5 +1,15 @@
 //import pokeApiRequest from apiRequest.js;
+/*
+TODO
+Counter for how long it takes to guess
+Countdown until next round
+Bigger notification of win/loss
+delay on picture... more points if they get it before then?
 
+Star Wars API? Switcher?
+
+
+*/
 
 var pokeList;
 var enteredAnswer;
