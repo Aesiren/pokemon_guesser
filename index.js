@@ -31,7 +31,11 @@ guessButton.addEventListener("click", () => {
   console.log("guess button clicked");
   GetGuess();
   CheckGuess(enteredAnswer, currentPokeName);
-  setTimeout(NewGame, 5000);
+  // var restTime = new TimeKeeper(5);
+  // console.log(restTime);
+  // restTime.startTimer();
+
+  setTimeout(ResetGame, 5000);
 })
 
 function NewGame() {
@@ -44,8 +48,16 @@ function NewGame() {
 }
 
 function ResetGame() {
+  console.log("resetting page...");
+
+  // var restTime = new TimeKeeper(5);
+  // console.log(restTime);
+  // restTime.startTimer();
+
+  NewGame();
 
 }
+
 
 async function GetRandom() {
   console.log("getting random");
@@ -98,13 +110,7 @@ function RevealPoke() {
   document.querySelector("#currentName").innerHTML = currentPokeName;
 }
 
-function ResetPage() {
 
-  NewGame();
-
-  console.log("resetting page...")
-
-}
 
 function AddScore() {
   console.log("adding to score");
@@ -121,6 +127,41 @@ function Congrats() {
 function TooBad() {
   document.querySelector("#winMessage").innerHTML = "Too Bad!";
 }
+
+// class TimeKeeper {
+//   constructor(seconds) {
+//     this.seconds = seconds;
+//     this.tempTime = 0;
+//     //this.done = false;
+//   };
+
+//   startTimer() {
+//     //this.tempTime = this.seconds;
+//     //this.done = false;
+//     var x = this.seconds;
+//     console.log(`Starting timer for ${x} seconds`)
+//     // do {
+//     //   setTimeout(function () {
+//     //     this.tempTime = x;
+//     //     console.log(x, this.tempTime);
+//     //     document.querySelector("#timer").innerHTML = this.tempTime;
+//     //     x = x - 1;
+//     //     //return this.tempTime;
+//     //   }, 1000);
+//     // } while (x > 0);
+//     for (x = this.seconds; x > 0; x--) {
+//       setTimeout(function () {
+//         this.tempTime = x;
+//         console.log(x, this.tempTime);
+//         document.querySelector("#timer").innerHTML = this.tempTime;
+//         //return this.tempTime;
+//       }, 1000);
+//       //this.done = true;
+//     }
+//   }
+
+// }
+
 
 async function pokeApiRequest(id) {
   // fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
