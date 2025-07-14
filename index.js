@@ -43,13 +43,19 @@ function NewGame() {
 
 }
 
-function GetRandom() {
+function ResetGame() {
+
+}
+
+async function GetRandom() {
   console.log("getting random");
 
   let random = Math.floor(Math.random() * 150);
   console.log(random);
-  pokeApiRequest(random);
-  setTimeout(ApplyRandom, 1000);
+  pokeList = await pokeApiRequest(random);
+  //console.log(pokeList);
+  //setTimeout(ApplyRandom, 1000);
+  ApplyRandom();
 
 }
 
@@ -116,9 +122,12 @@ function TooBad() {
   document.querySelector("#winMessage").innerHTML = "Too Bad!";
 }
 
-function pokeApiRequest(id) {
-  fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
-    .then(response => response.json())
-    .then(json => { /*console.log(json);*/ pokeList = json; })
+async function pokeApiRequest(id) {
+  // fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+  //   .then(response => response.json())
+  //   .then(json => { /*console.log(json);*/ return json; })
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`);
+  const data = await res.json();
+  return data;
 }
 
