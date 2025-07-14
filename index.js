@@ -28,14 +28,16 @@ window.onload = function () {
 };
 
 guessButton.addEventListener("click", () => {
+
   console.log("guess button clicked");
   GetGuess();
   CheckGuess(enteredAnswer, currentPokeName);
   // var restTime = new TimeKeeper(5);
   // console.log(restTime);
   // restTime.startTimer();
+  Timer(5);
+  // setTimeout(ResetGame, 5000);
 
-  setTimeout(ResetGame, 5000);
 })
 
 function NewGame() {
@@ -128,6 +130,19 @@ function TooBad() {
   document.querySelector("#winMessage").innerHTML = "Too Bad!";
 }
 
+
+function Timer(timer) {
+
+  var intervalID = setInterval(function () {
+    if (timer === 0) {
+      clearInterval(intervalID);
+      ResetGame();
+    } else {
+      timer -= 1;
+      document.querySelector("#timer").innerHTML = timer;
+    }
+  }, 1000)
+}
 // class TimeKeeper {
 //   constructor(seconds) {
 //     this.seconds = seconds;
@@ -136,30 +151,20 @@ function TooBad() {
 //   };
 
 //   startTimer() {
-//     //this.tempTime = this.seconds;
-//     //this.done = false;
-//     var x = this.seconds;
-//     console.log(`Starting timer for ${x} seconds`)
-//     // do {
-//     //   setTimeout(function () {
-//     //     this.tempTime = x;
-//     //     console.log(x, this.tempTime);
-//     //     document.querySelector("#timer").innerHTML = this.tempTime;
-//     //     x = x - 1;
-//     //     //return this.tempTime;
-//     //   }, 1000);
-//     // } while (x > 0);
-//     for (x = this.seconds; x > 0; x--) {
-//       setTimeout(function () {
-//         this.tempTime = x;
-//         console.log(x, this.tempTime);
-//         document.querySelector("#timer").innerHTML = this.tempTime;
-//         //return this.tempTime;
-//       }, 1000);
-//       //this.done = true;
-//     }
+//     this.tempTime = this.seconds;
+//     console.log(`starting timer: ${this.tempTime}`);
 //   }
 
+//   runTimer() {
+//     if (this.tempTime === 0) {
+//       clearInterval(intervalID);
+//       ResetGame();
+//     } else {
+//       this.tempTime -= 1;
+//       console.log(`running timer. At ${this.tempTime} seconds`);
+//       document.querySelector("#timer").innerHTML = this.tempTime;
+//     }
+//   }
 // }
 
 
