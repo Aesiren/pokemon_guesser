@@ -64,7 +64,7 @@ function ResetGame() {
 async function GetRandom() {
   console.log("getting random");
 
-  let random = Math.floor(Math.random() * 150);
+  let random = Math.floor(Math.random() * (150) + 1);
   console.log(random);
   pokeList = await pokeApiRequest(random);
   //console.log(pokeList);
